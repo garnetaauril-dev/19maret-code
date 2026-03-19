@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+	int diameter;
+	float jari;
+	float luas, keliling;
+	
+	printf("Masukkan diameter lingkaran: ");
+	scanf("%d", &diameter);
+	
+	jari = diameter / 2;
+	luas = 3.14 * jari * jari;
+	keliling = 2 * jari * 3.14;
+	
+	printf("Luas lingkaran %.2f cm kuadrat\n", luas);
+	printf("keliling lingkaran %.2f cm", keliling);	
+}
