@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main () {
+    char nama[100];
+    int skrg;
+    int naik, total;
+
+    printf("Masukkan nama anda: ");
+    scanf("%s", nama);
+    printf("Masukkan gaji sekarang (contoh: 10000000): ");
+    scanf("%d", &skrg);
+    
+    if(skrg >= 0 && skrg <= 10000000){
+        naik = skrg + (skrg * 0.20);
+    } else if(skrg > 10000000 && skrg <= 15000000){
+        naik = skrg + (skrg * 0.10);
+    } else if(skrg > 15000000 && skrg <= 20000000){
+        naik = skrg + (skrg * 0.05);
+    } else {
+        naik = skrg + 0;
+    }
+
+    total = skrg + naik;
+
+    printf("Nama Pemain: %s\n", nama);
+    printf("Gaji Sekarang: %d\n", skrg);
+    printf("Gaji Setelah Kenaikan: %d\n", naik);
+    printf("Total Gaji sebelum dan sesudah kenaikan: %d\n", total);
+}
