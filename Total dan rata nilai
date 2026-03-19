@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main() {
+    int sen,sel,rab,kam,jum,sab,min;
+    int total;
+    float rata;
+
+    printf("Masukkan nilai Senin: ");
+    scanf("%d", &sen);
+    printf("Masukkan nilai Selasa: ");
+    scanf("%d", &sel);
+    printf("Masukkan nilai Rabu: ");
+    scanf("%d", &rab);
+    printf("Masukkan nilai Kamis: ");
+    scanf("%d", &kam);
+    printf("Masukkan nilai Jumat: ");
+    scanf("%d", &jum);
+    printf("Masukkan nilai Sabtu: ");
+    scanf("%d", &sab);
+    printf("Masukkan nilai Minggu: ");
+    scanf("%d", &min);
+
+    total = sen + sel + rab + kam + jum + sab + min;
+    rata = total / 7.0;
+    printf("Total biaya penjualan : %d\n", total);
+    printf("Rata-rata: %.2f\n", rata);
+}
