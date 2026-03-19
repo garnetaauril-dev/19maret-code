@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int pilih;
+    float a, b;
+    do {
+        printf("\n=== Kalkulator ===\n");
+        printf("1. Tambah\n2. Kurang\n3. Kali\n4. Bagi\n0. Keluar\nPilih: ");
+        scanf("%d", &pilih);
+
+        if (pilih == 0) break;
+        printf("Masukkan dua angka: ");
+        scanf("%f %f", &a, &b);
+
+        switch (pilih) {
+            case 1: printf("Hasil = %.2f\n", a + b); break;
+            case 2: printf("Hasil = %.2f\n", a - b); break;
+            case 3: printf("Hasil = %.2f\n", a * b); break;
+            case 4: 
+                (b != 0) ? printf("Hasil = %.2f\n", a / b) : printf("Error: Pembagi nol!\n");
+                break;
+            default: printf("Pilihan tidak valid!\n");
+        }
+    } while (pilih != 0);
+
+    printf("Program selesai.\n");
+    return 0;
+}
